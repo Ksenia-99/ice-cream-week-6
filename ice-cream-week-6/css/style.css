@@ -1,0 +1,137 @@
+body {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 'header header header'
+        'main main aside'
+        'main main aside'
+        'footer footer footer';
+    gap: 8px;
+    font-family: 'Jost', sans-serif;
+}
+
+body a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #3b692a;
+}
+
+header {
+    grid-area: header;
+    width: 100%;
+    background: linear-gradient(45deg, #b1d5a5, #eeedd3);
+}
+
+header h1 {
+    font-size: 38px;
+    font-family: 'Caprasimo', cursive;
+    text-align: center;
+    margin: 40px 0 10px 0;
+    color: #c94b5b;
+}
+
+header p {
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #679854;
+    margin: 0 0 30px 0;
+}
+
+header nav {
+    width: 20%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+nav a {
+    margin-right: 10px;
+}
+
+main {
+    grid-area: main;
+    width: 100%;
+}
+
+article {
+    grid-area: article;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.limeic p,
+.mintic p,
+.sherbet p {
+    position: relative;
+    top: 110px;
+    text-align: center;
+    padding: 6px 0 6px 0;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    background-color: #fff;
+    color: #749d69;
+}
+
+.limeic,
+.mintic {
+    width: 407px;
+    height: 270px;
+    background-size: cover;
+    margin: 20px;
+}
+
+.limeic {
+    background-image: url(../img/limeice.jpg);
+}
+
+.mintic {
+    background-image: url(../img/mintice.jpg);
+}
+
+.sherbet {
+    background-image: url(../img/sherbet.jpg);
+    background-size: cover;
+    width: 854px;
+    height: 215px;
+    margin: 20px 0 20px 0;
+}
+
+aside {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin: 20px 0 0 0;
+    position: relative;
+    right: 30px;
+    line-height: 2;
+}
+
+aside p {
+    color: #749d69;
+}
+
+footer {
+    grid-area: footer;
+    width: 100%;
+    height: auto;
+    background-color: #afd3a3;
+}
+
+footer div {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px 0 10px 0;
+    line-height: 2;
+}
+
+.footer-div {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
