@@ -13,42 +13,43 @@ body {
 
 body a {
     text-decoration: none;
-    font-size: 14px;
+    font-size: 1em;
     color: #3b692a;
 }
 
 header {
     grid-area: header;
     width: 100%;
+    position: relative;
     background: linear-gradient(45deg, #b1d5a5, #eeedd3);
 }
 
 header h1 {
-    font-size: 38px;
+    font-size: 2em;
     font-family: 'Caprasimo', cursive;
     text-align: center;
-    margin: 40px 0 10px 0;
+    margin: 1.5em 0 0.4em 0;
     color: #c94b5b;
 }
 
 header p {
-    font-size: 16px;
+    font-size: 1em;
     text-align: center;
     letter-spacing: 1px;
     text-transform: uppercase;
     color: #679854;
-    margin: 0 0 30px 0;
+    margin: 0 0 1.8em 0;
 }
 
 header nav {
     width: 20%;
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 0.8em;
+    right: 0.8em;
 }
 
 nav a {
-    margin-right: 10px;
+    margin-right: 0.8em;
 }
 
 main {
@@ -67,11 +68,11 @@ article {
 .mintic p,
 .sherbet p {
     position: relative;
-    top: 110px;
+    top: 8em;
     text-align: center;
-    padding: 6px 0 6px 0;
+    padding: 0.5em 0 0.5em 0;
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 1em;
     letter-spacing: 0.1em;
     background-color: #fff;
     color: #749d69;
@@ -82,7 +83,7 @@ article {
     width: 407px;
     height: 270px;
     background-size: cover;
-    margin: 20px;
+    margin: 1.6em;
 }
 
 .limeic {
@@ -98,7 +99,7 @@ article {
     background-size: cover;
     width: 854px;
     height: 215px;
-    margin: 20px 0 20px 0;
+    margin: 1.6em;
 }
 
 aside {
@@ -106,9 +107,9 @@ aside {
     display: flex;
     flex-direction: column;
     height: auto;
-    margin: 20px 0 0 0;
+    margin: 1em 0 0 0;
     position: relative;
-    right: 30px;
+    right: 2em;
     line-height: 2;
 }
 
@@ -126,12 +127,81 @@ footer {
 footer div {
     display: flex;
     justify-content: space-evenly;
-    padding: 10px 0 10px 0;
+    padding: 0.6em;
     line-height: 2;
 }
 
 .footer-div {
     display: flex;
     flex-direction: column;
-    margin-right: 10px;
+    margin-right: 1em;
+}
+
+@media screen and (max-width: 320px) {
+
+    body,
+    header,
+    main,
+    footer {
+        width: 100vw;
+    }
+
+    header nav {
+        width: 100%;
+        text-align: center;
+        right: 0;
+    }
+
+    header h1 {
+        width: 50%;
+        margin: 1.6em auto 0.6em auto;
+    }
+
+    .limeic,
+    .mintic,
+    .sherbet {
+        width: 60%;
+    }
+
+    aside {
+        display: none;
+    }
+
+    footer div {
+        width: 100%;
+        padding: 4% 2% 4% 4%;
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+}
+
+@media screen and (min-width: 2560px) {
+
+    body,
+    header,
+    main,
+    footer {
+        width: 100vw;
+    }
+
+    header nav {
+        text-align: center;
+        width: 100%;
+        right: 0;
+    }
+
+    .sherbet {
+        height: 270px;
+        width: 407px;
+    }
+
+    aside {
+        right: 6em;
+    }
+
+    footer div {
+        justify-content: center;
+    }
 }
